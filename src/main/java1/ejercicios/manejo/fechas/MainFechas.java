@@ -44,9 +44,9 @@ public class MainFechas {
 		System.out.println(fechaEspecificaIni);
 	//Ejercicios
 		CursoVacacional curso3 = new CursoVacacional();
-		curso2.setNombre("Karate");
-		curso2.setFechaInicio(fechaEspecificaIni);
-		curso2.setFechaFin(fechaEspecificaFin);
+		curso3.setNombre("Karate");
+		curso3.setFechaInicio(fechaEspecificaIni);
+		curso3.setFechaFin(fechaEspecificaFin);
 		
 		LocalDate fechaVista=curso3.getFechaFin();
 		LocalDate fechaVistaNueva=fechaVista.plusDays(3);
