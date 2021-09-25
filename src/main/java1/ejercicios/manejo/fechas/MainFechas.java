@@ -1,6 +1,7 @@
 package ejercicios.manejo.fechas;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class MainFechas {
 
@@ -36,26 +37,48 @@ public class MainFechas {
 		System.out.println("Nombre:" + curso2.getNombre());
 		System.out.println("F I :" + curso2.getFechaInicio());
 		System.out.println("F F :" + curso2.getFechaFin());
-		//**************************************************************************************
-		
-		//FEchas especificas
+		// **************************************************************************************
+
+		// FEchas especificas
 		LocalDate fechaEspecificaIni = LocalDate.of(2022, 2, 15);
 		LocalDate fechaEspecificaFin = LocalDate.of(2022, 7, 10);
 		System.out.println(fechaEspecificaIni);
-	//Ejercicios
+		// Ejercicios
 		CursoVacacional curso3 = new CursoVacacional();
 		curso3.setNombre("Karate");
 		curso3.setFechaInicio(fechaEspecificaIni);
 		curso3.setFechaFin(fechaEspecificaFin);
-		
-		LocalDate fechaVista=curso3.getFechaFin();
-		LocalDate fechaVistaNueva=fechaVista.plusDays(3);
+
+		LocalDate fechaVista = curso3.getFechaFin();
+		LocalDate fechaVistaNueva = fechaVista.plusDays(3);
 		curso3.setFechaFin(fechaVistaNueva);
-		
+
 		System.out.println("Nombre:" + curso3.getNombre());
 		System.out.println("F I :" + curso3.getFechaInicio());
 		System.out.println("F F :" + curso3.getFechaFin());
-		
-	}
 
+		////
+		// FEchas especificas
+		LocalDate fechaEspecificaInic = LocalDate.of(2022, 2, 15);
+		LocalDate fechaEspecificaFinn = LocalDate.of(2022, 7, 10);
+		System.out.println(fechaEspecificaIni);
+		// Ejercicios
+		CursoVacacional curso4 = new CursoVacacional();
+		curso4.setNombre("Karate");
+		curso4.setFechaInicio(fechaEspecificaIni);
+		curso4.setFechaFin(fechaEspecificaFin);
+
+		LocalDate fechaVista1 = curso4.getFechaFin();
+		LocalDate fechaVistaNueva1 = fechaVista1.plusDays(3);
+		curso3.setFechaFin(fechaVistaNueva1);
+
+		System.out.println("Nombre:" + curso4.getNombre());
+		System.out.println("F I :" + curso4.getFechaInicio());
+		System.out.println("F F Formateada:" + curso4.getFechaFin().format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
+
+		System.out.println("Que dia es hoy");
+		LocalDate diaHoy3 = LocalDate.now();
+		System.out.println(diaHoy3.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
+		System.out.println(diaHoy3.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+	}
 }
